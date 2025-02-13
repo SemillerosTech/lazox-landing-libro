@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --main: #fe1919;
+  --secondary: #00d34e;
+  --complement: #f4d941;
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@font-face {
+  font-family: "Circle Rounded";
+  src: local("Circle Rounded"),
+    url("/fonts/CirceRounded-ExtraBold.otf") format("opentype")
+      tech(color-COLRv1),
+    url("/fonts/CirceRounded-ExtraBold.otf") format("opentype");
+}
+
+.font-cr {
+  font-family: "Circle Rounded" !important;
+}
+
+body {
+  /* color: var(--foreground);
+  background: var(--background); */
+  font-family: "Montserrat";
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Circle Rounded";
+}
+
+h1 {
+  font-size: 1rem;
+}
+
+b {
+  font-weight: bold;
+  color: var(--secondary);
+}
+
+@media (min-width: 768px) {
+  body {
+    font-size: 1.15rem;
+  }
+
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+.bg-banner {
+  background: transparent url("/banner-bg.jpg") fixed no-repeat center / cover;
+}
+
+.bg-promos {
+  background: transparent url("/bg-offer.jpg") fixed no-repeat center / cover;
+}
+
+/* ANIMATIONS */
+
+.floating-image {
+  position: relative;
+  -webkit-animation-name: imaheder; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes floating {
+  0% {
+    top: -0.5em;
+  }
+  50% {
+    top: 0.5em;
+  }
+  100% {
+    top: -0.5em;
+  }
+}
