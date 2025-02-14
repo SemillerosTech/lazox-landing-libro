@@ -55,19 +55,19 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center relative">
-          <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-3xl  relative -bottom-5">
+          <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
             Quiero mi libro con descuento
           </button>
         </div>
       </main>
 
-      <section className="py-20 container mx-auto">
+      <section className="py-20 container mx-auto px-10 md:px-0">
         <h2 className="mx-auto text-center text-main">
           ¿Por qué El Hombre en Busca de Sentido es Imperdible?
         </h2>
 
-        <div className="flex items-center justify-center">
-          <div className="w-1/2 flex text-left items-center justify-center flex-col">
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="md:w-1/2 flex text-left items-center justify-center flex-col order-2 md:order-1">
             <div className="flex justify-start items-start flex-col">
               <h2 className="mb-4 text-secondary text-3xl">
                 Beneficios de leerlo
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-1/2 flex items-center justify-center">
+          <div className="md:w-1/2 flex items-center justify-center order-1 md:order-2">
             <Image
               src={bookYellow}
               alt="Foto de ejemplo del libro "
@@ -100,33 +100,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto pb-20">
-        <h2 className="mb-4 text-secondary text-3xl">Otros libros exitosos</h2>
+      <section className="container mx-auto ">
+        <h2 className="mb-4 text-secondary text-3xl pl-10">
+          Otros libros exitosos
+        </h2>
         <div>
           <ProductCard />
         </div>
       </section>
 
-      <section className="container mx-auto py-20">
+      <section className="container mx-auto py-20 px-10 md:px-0">
         <h2 className="mb-4 text-secondary text-3xl">
           Profesionales dan testimonio
         </h2>
 
-        <div className="flex">
-          <div className="w-1/2 flex items-center justify-center">
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-1/2 flex items-center justify-center">
             <iframe
-              width="560"
-              height="315"
               src="https://www.youtube.com/embed/TYrRJ7Spn90?si=scvE3OtW0UHwLVdk"
               title="YouTube video player"
-              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
+              width="100%"
+              className="h-[200px] mb-5 md:h-[350px]"
             ></iframe>
           </div>
 
-          <div className="md:px-20">
+          <div className="md:w-1/2 md:px-10">
             <h2 className="text-secondary text-3xl">Impacto a nivel mundial</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -148,21 +149,21 @@ export default function Home() {
       <section className=" bg-promos">
         <div className="container mx-auto">
           <div className="relative flex justify-center">
-            <button className="bg-main text-white rounded-full font-cr py-2 px-10 text-3xl  relative -top-5">
+            <button className="bg-main text-white rounded-full font-cr py-2 px-10 text-xl md:text-3xl  relative -top-5">
               Oferta solo durante la feria del libro
             </button>
           </div>
 
-          <div className="flex py-20">
-            <div className="w-1/2 flex items-center justify-center">
+          <div className="flex flex-col md:flex-row py-20 px-10 md:px-0">
+            <div className="md:w-1/2 flex items-center justify-center">
               <Image
                 src={monos}
                 alt="Foto de ejemplo del libro"
-                className="floating-image w-9/12 transition-transform duration-300 hover:scale-110"
+                className="floating-image w-full ml-10 md:w-9/12 transition-transform duration-300 hover:scale-110"
               />
             </div>
-            <div className="w-1/2 flex items-center justify-center">
-              <article className="bg-white rounded-xl p-4 text-2xl">
+            <div className="md:w-1/2 flex items-center justify-center">
+              <article className="bg-white rounded-xl p-4 text-lg md:text-2xl">
                 <b className="text-black">
                   Disponible en la Logoteca
                   <Image
@@ -184,7 +185,7 @@ export default function Home() {
       </section>
 
       <section className="container mx-auto py-20">
-        <h2 className="mb-4 text-main text-3xl text-center ">
+        <h2 className="mb-4 text-main text-xl md:text-3xl text-center ">
           Déjanos tus datos para apartar tu copia de: <br />
           “El hombre en busca de sentido”
         </h2>
@@ -194,15 +195,16 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="container mx-auto flex justify-between ">
-        <div>
+      <footer className="container mx-auto flex flex-col md:flex-row justify-between px-10 md:px-0">
+        <div className="order-3 md:order-1">
           <Image
             src={footerMono}
             alt="asd"
-            className="transition-transform duration-300 hover:scale-110"
+            className="transition-transform duration-300 hover:scale-110 mx-auto"
           />
         </div>
-        <div className="flex  flex-col justify-center">
+
+        <div className="flex flex-col justify-center order-1 md:order-2 my-10 md:my-0">
           <p className="font-bold font-cr text-secondary text-2xl">
             Encuentranos en:
           </p>
@@ -222,7 +224,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex justify-center flex-col">
+        <div className="flex justify-center flex-col order-2 md:order-3">
           <p className="font-bold font-cr text-secondary text-2xl">
             Contáctanos en:
           </p>

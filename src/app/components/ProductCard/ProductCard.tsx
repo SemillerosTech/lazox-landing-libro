@@ -8,11 +8,11 @@ const ProductCard = () => {
   const books = [1, 2, 3, 4, 5, 6];
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-between overflow-x-auto overflow-y-hidden pl-10 py-10 space-x-2">
         {books.map((e, index) => (
           <article
             key={index}
-            className="bg-white rounded-lg border w-fit p-3 transition-transform duration-300 hover:scale-125 cursor-pointer"
+            className="bg-white rounded-lg border w-fit p-3 transition-transform duration-300 md:hover:scale-125 cursor-pointer"
           >
             <Image
               src={successBook}

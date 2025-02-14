@@ -40,8 +40,9 @@ h4 {
   font-family: "Circle Rounded";
 }
 
-h1 {
-  font-size: 1rem;
+h1,
+h2 {
+  font-size: 2rem;
 }
 
 b {

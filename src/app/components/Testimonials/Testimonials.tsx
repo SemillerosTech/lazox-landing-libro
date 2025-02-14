@@ -33,9 +33,9 @@ const Testimonials = () => {
   ];
   return (
     <>
-      <div className="flex justify-between space-x-20">
+      <div className="flex justify-between md:space-x-20 overflow-auto">
         {testimonials.map((t) => (
-          <div key={t.id} className="w-fit text-center">
+          <div key={t.id} className="min-w-52 md:w-fit text-center">
             <Image
               src={person}
               alt="Libro banner"
@@ -57,7 +57,7 @@ const Testimonials = () => {
                 />
               ))}
             </div>
-            <p className="text-base">{t.testimonial}</p>
+            <p className="text-sm md:text-base">{t.testimonial}</p>
           </div>
         ))}
       </div>
