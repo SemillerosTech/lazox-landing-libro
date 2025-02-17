@@ -11,13 +11,25 @@ import marker from "../../public/marker.png";
 import ProductCard from "./components/ProductCard/ProductCard";
 import Testimonials from "./components/Testimonials/Testimonials";
 import monos from "../../public/monos-offer.svg";
-import phone from "../../public/phone.svg";
+import whatsapp from "../../public/whatsapp.svg";
+import logoSemilleros from "../../public/semilleros-logo-apaisado.svg";
 import mail from "../../public/mail.svg";
-
 import NewsLetterForm from "./components/NewsLetterForm/NewsLetterForm";
 import PingComponent from "./components/PingComponent/PingComponent";
+import Link from "next/link";
+import FloatingElements from "./components/FloatingElements/FloatingElements";
 
 export default function Home() {
+  const address = encodeURIComponent(
+    "Calz. de Tlalpan 1552, sineo, Miravalle, Benito Juárez, 03580 Ciudad de México, CDMX"
+  );
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${address}`;
+  const phoneNumber = "5530179924";
+  const message = encodeURIComponent(
+    "Quiero más información sobre logoterapia"
+  );
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+
   return (
     <>
       <main className="pt-10 text-white flex flex-col items-center justify-center bg-banner">
@@ -198,6 +210,19 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="container mx-auto flex items-center justify-center py-10 flex-col">
+        <h2 className="text-secondary">
+          Para información especializada sobre logoterapia visita:
+        </h2>
+        <Link href={"https://www.semillerosdesentido.org/"}>
+          <Image
+            src={logoSemilleros}
+            alt="Semilleros de sentido"
+            className="mt-4 w-[250px] transition-transform duration-300 hover:scale-110 cursor-pointer"
+          />
+        </Link>
+      </section>
+
       <footer className="container mx-auto flex flex-col md:flex-row justify-between px-10 md:px-0">
         <div className="order-3 md:order-1">
           <Image
@@ -216,14 +241,16 @@ export default function Home() {
             <div className="flex items-center justify-center mr-3">
               <Image src={marker} alt="asd" className="" />
             </div>
-            <p>
-              <b className="text-blue-950">
-                {" "}
-                Calz. de Tlalpan 1556, Col. Miravalle
-              </b>{" "}
-              <br />
-              {"(¡A media cuadra del Metro Ermita!)"}
-            </p>
+            <Link href={mapsUrl} target="_blank" rel="noopener noreferrer">
+              <p>
+                <b className="text-blue-950">
+                  Calz. de Tlalpan 1552, sineo, Miravalle, <br /> Benito Juárez,
+                  CP: 03580 Ciudad de México, CDMX
+                </b>
+                <br />
+                {"(¡A media cuadra del Metro Ermita!)"}
+              </p>
+            </Link>
           </div>
         </div>
 
@@ -234,20 +261,33 @@ export default function Home() {
 
           <div className="flex justify-start">
             <div className="flex items-center h-full ">
-              <Image src={phone} width={20} alt="asd" className="mr-1" />
+              <Image src={whatsapp} width={20} alt="asd" className="mr-1" />
             </div>
-            <p>55 3017 9924</p>
+            <p>
+              <Link
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                55 3017 9924
+              </Link>
+            </p>
           </div>
 
           <div className="flex justify-start">
             <div className="flex items-center h-full ">
               <Image src={mail} width={20} alt="asd" className="mr-1" />
             </div>
-            <p>rossy@semillerosdesentido.org</p>
+            <p>
+              <Link href="mailto:rossy@semillerosdesentido.org">
+                rossy@semillerosdesentido.org
+              </Link>
+            </p>
           </div>
         </div>
       </footer>
       <PingComponent />
+      <FloatingElements />
     </>
   );
 }
