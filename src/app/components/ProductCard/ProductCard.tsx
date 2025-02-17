@@ -64,7 +64,7 @@ const ProductCard = () => {
               setModalContent({
                 title: b.title,
                 desc: b.description,
-                img: b.img,
+                img: b.img.src,
               });
 
               setIsOpen(true);
