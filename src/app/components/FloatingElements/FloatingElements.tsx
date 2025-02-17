@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import react, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ArrowUp } from "lucide-react";
 import whatsapp from "../../../../public/whatsapp.svg";
 
