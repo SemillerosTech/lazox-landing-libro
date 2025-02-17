@@ -140,6 +140,8 @@ const ProductCard = () => {
                   alt="Libro banner"
                   className="w-full"
                   draggable={false}
+                  height={10}
+                  width={200}
                 />
               </div>
 
