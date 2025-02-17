@@ -4,12 +4,24 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 import { books } from "@/app/constants/books.constant";
 import star from "../../../../public/star.svg";
+import { motion } from "framer-motion";
+import { X } from "lucide-react";
 
 const ProductCard = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<{
+    title: string;
+    desc: string;
+    img: string;
+  }>({
+    title: "",
+    desc: "",
+    img: "",
+  });
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (scrollRef.current) {
@@ -48,6 +60,15 @@ const ProductCard = () => {
         {books.map((b, index) => (
           <article
             key={index}
+            onClick={() => {
+              setModalContent({
+                title: b.title,
+                desc: b.description,
+                img: b.img,
+              });
+
+              setIsOpen(true);
+            }}
             className="bg-white rounded-lg border min-w-[200px] p-3 transition-transform duration-300 md:hover:scale-110 cursor-pointer"
           >
             <Image
@@ -88,6 +109,47 @@ const ProductCard = () => {
           </article>
         ))}
       </div>
+
+      {isOpen && (
+        <div
+          className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-sm z-50"
+          onClick={() => setIsOpen(false)} // Cierra el modal al hacer clic fuera
+        >
+          <motion.div
+            className="bg-white rounded-lg p-6 shadow-lg relative max-w-[600px]"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
+            onClick={(e) => e.stopPropagation()} // Evita que se cierre al hacer clic dentro
+          >
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+            >
+              <X size={20} />
+            </button>
+
+            <h2 className="text-xl font-bold text-secondary">
+              {modalContent.title}
+            </h2>
+
+            <div className="flex">
+              <div className="w-1/2">
+                <Image
+                  src={modalContent.img}
+                  alt="Libro banner"
+                  className="w-full"
+                  draggable={false}
+                />
+              </div>
+
+              <div className="w-1/2 items-center flex">
+                <p className="text-gray-600 mt-2">{modalContent.desc}</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      )}
     </>
   );
 };
