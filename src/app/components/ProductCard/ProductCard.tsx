@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import successBook from "../../../../public/libro-transparent.png";
 import { books } from "@/app/constants/books.constant";
 import star from "../../../../public/star.svg";
 
