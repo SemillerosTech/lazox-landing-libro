@@ -2,11 +2,18 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, MapPin } from "lucide-react";
 import whatsapp from "../../../../public/whatsapp.svg";
 
 const FloatingElements = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const destination = "19.432608,-99.133209"; // Coordenadas de CDMX, cámbialas según necesites
+
+  const openGoogleMaps = () => {
+    const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+    window.open(url, "_blank");
+  };
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -40,11 +47,18 @@ const FloatingElements = () => {
 
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-16 right-4 p-3 rounded-full bg-secondary text-white shadow-lg transition-opacity duration-300 hover:bg-primary ${
+        className={`fixed bottom-16 right-4 p-3 rounded-full bg-secondary text-white shadow-lg transition-opacity duration-300 hover:bg-main ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
         <ArrowUp size={24} />
+      </button>
+
+      <button
+        onClick={openGoogleMaps}
+        className="fixed bottom-4 left-4 p-3 rounded-full bg-secondary text-white shadow-lg transition-opacity duration-300 hover:bg-main"
+      >
+        <MapPin size={24} />
       </button>
     </>
   );
