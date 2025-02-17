@@ -223,6 +223,17 @@ export default function Home() {
         </Link>
       </section>
 
+      <div style={{ width: "100%", height: "350px" }}>
+        <iframe
+          src={mapsUrl}
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
       <footer className="container mx-auto flex flex-col md:flex-row justify-between px-10 md:px-0">
         <div className="order-3 md:order-1">
           <Image
