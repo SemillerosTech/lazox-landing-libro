@@ -13,6 +13,7 @@ import Testimonials from "./components/Testimonials/Testimonials";
 import monos from "../../public/monos-offer.svg";
 import whatsapp from "../../public/whatsapp.svg";
 import logoSemilleros from "../../public/semilleros-logo-apaisado.svg";
+import cursor from "../../public/pointer.svg";
 import mail from "../../public/mail.svg";
 import NewsLetterForm from "./components/NewsLetterForm/NewsLetterForm";
 import PingComponent from "./components/PingComponent/PingComponent";
@@ -256,7 +257,13 @@ export default function Home() {
               <Image src={marker} alt="asd" className="" />
             </div>
             <Link href={mapsUrl} target="_blank" rel="noopener noreferrer">
-              <p>
+              <p className="relative">
+                <Image
+                  src={cursor}
+                  alt="click here"
+                  className="absolute w-[32px] bottom-0 right-0"
+                />
+
                 <b className="text-blue-950">
                   Calz. de Tlalpan 1552, sineo, Miravalle, <br /> Benito Juárez,
                   CP: 03580 Ciudad de México, CDMX
