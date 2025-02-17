@@ -8,7 +8,7 @@ import whatsapp from "../../../../public/whatsapp.svg";
 const FloatingElements = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const destination = "19.432608,-99.133209"; // Coordenadas de CDMX, cámbialas según necesites
+  const destination = "19.3610131,-99.1426649";
 
   const openGoogleMaps = () => {
     const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
