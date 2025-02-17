@@ -31,11 +31,15 @@ export default function Home() {
           />
 
           <h1 className="mb-4 font-cr text-4xl leading-none">
+            Feria del libro 22 FEBRERO 2025
+          </h1>
+
+          <h2 className="mb-4 font-cr text-4xl leading-none">
             Aprovecha tu descuento <br />
             <span className="text-2xl">
               y asiste GRATIS a la conferencia principal
             </span>
-          </h1>
+          </h2>
         </div>
 
         <div className="flex">

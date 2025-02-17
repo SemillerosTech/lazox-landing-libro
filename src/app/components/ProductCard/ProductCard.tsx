@@ -42,8 +42,8 @@ const ProductCard = () => {
         onMouseUp={handleMouseUp}
         onMouseMove={handleMouseMove}
         style={{
-          cursor: isDragging ? "grabbing" : "grab", // Cambiar el cursor dependiendo de si estamos arrastrando
-          userSelect: "none", // Deshabilitar la selección de texto
+          cursor: isDragging ? "grabbing" : "grab",
+          userSelect: "none",
         }}
       >
         {books.map((b, index) => (
@@ -52,10 +52,10 @@ const ProductCard = () => {
             className="bg-white rounded-lg border min-w-[200px] p-3 transition-transform duration-300 md:hover:scale-110 cursor-pointer"
           >
             <Image
-              src={successBook}
+              src={b.img}
               alt="Foto de ejemplo del libro"
               className="w-full mb-3"
-              draggable={false} // Deshabilitar arrastre de la imagen
+              draggable={false}
             />
             <div
               className="text-sm leading-tight w-full overflow-hidden"
