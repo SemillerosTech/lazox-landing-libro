@@ -71,9 +71,11 @@ export default function Home() {
           </div>
         </div>
         <div className="flex justify-center relative">
-          <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
-            Quiero mi libro con descuento
-          </button>
+          <Link href={"#contacto"}>
+            <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
+              Quiero mi libro con descuento
+            </button>
+          </Link>
         </div>
       </main>
 
@@ -100,9 +102,11 @@ export default function Home() {
                 Mas de 12 millones de copias venidas en el mundo
               </b>
 
-              <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-3xl  relative mt-10">
-                Quiero mi libro con descuento
-              </button>
+              <Link href={"#contacto"}>
+                <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-3xl  relative mt-10">
+                  Quiero mi libro con descuento
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -199,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto py-20">
+      <section id="contacto" className="container mx-auto py-20">
         <h2 className="mb-4 text-main text-xl md:text-3xl text-center ">
           Déjanos tus datos para apartar tu copia de: <br />
           “El hombre en busca de sentido”
@@ -210,8 +214,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto flex items-center justify-center py-10 flex-col">
-        <h2 className="text-secondary">
+      <section className="container mx-auto flex items-center justify-center py-10 px-10 flex-col">
+        <h2 className="text-secondary text-center ">
           Para información especializada sobre logoterapia visita:
         </h2>
         <Link href={"https://www.semillerosdesentido.org/"}>
@@ -225,12 +229,11 @@ export default function Home() {
 
       <div style={{ width: "100%", height: "350px" }}>
         <iframe
-          src={mapsUrl}
+          src="https://www.google.com/maps?q=Calz.+de+Tlalpan+1552,+sineo,+Miravalle,+Benito+Juárez,+03580+Ciudad+de+México,+CDMX&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
           loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
 

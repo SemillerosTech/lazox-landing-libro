@@ -27,10 +27,13 @@
   font-family: "Circle Rounded" !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  /* color: var(--foreground);
-  background: var(--background); */
   font-family: "Montserrat";
+  scroll-behavior: smooth;
 }
 
 h1,
