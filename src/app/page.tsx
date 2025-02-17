@@ -104,12 +104,11 @@ export default function Home() {
         <h2 className="mb-4 text-secondary text-3xl pl-10">
           Otros libros exitosos
         </h2>
-        <div>
-          <ProductCard />
-        </div>
+
+        <ProductCard />
       </section>
 
-      <section className="container mx-auto py-20 px-10 md:px-0">
+      <section className="container mx-auto py-20 px-10 md:px-0 hidden">
         <h2 className="mb-4 text-secondary text-3xl">
           Profesionales dan testimonio
         </h2>
