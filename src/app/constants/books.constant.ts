@@ -34,8 +34,8 @@ export const books = [
   },
   {
     title: "Lo que no está escrito en mis libros: Memorias",
-    offerPrice: 660,
-    price: 409,
+    offerPrice: 409,
+    price: 660,
     discount: 38,
     available: true,
     description:
@@ -78,7 +78,7 @@ export const books = [
   },
   {
     title: "Fundamentos y aplicaciones de la logoterapia",
-    offerPrice: 313,
+    offerPrice: 444,
     price: 715,
     discount: 38,
     available: true,
