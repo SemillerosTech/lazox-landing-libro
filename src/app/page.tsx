@@ -100,7 +100,7 @@ export default function Home() {
               </ul>
 
               <b className="mt-10 text-main">
-                Mas de 12 millones de copias venidas en el mundo
+                Mas de 12 millones de copias vendidas en el mundo
               </b>
 
               <Link href={"#contacto"}>
