@@ -8,9 +8,15 @@ interface GoogleConversionTrackerProps {
   currency?: string;
 }
 
+interface GtagEventParams {
+  send_to: string;
+  value: number;
+  currency: string;
+}
+
 declare global {
   interface Window {
-    gtag?: (...args: any[]) => void;
+    gtag?: (event: string, action: string, params: GtagEventParams) => void;
   }
 }
 
