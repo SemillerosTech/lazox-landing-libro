@@ -19,6 +19,7 @@ import NewsLetterForm from "./components/NewsLetterForm/NewsLetterForm";
 import PingComponent from "./components/PingComponent/PingComponent";
 import Link from "next/link";
 import FloatingElements from "./components/FloatingElements/FloatingElements";
+import GoogleConversionTracker from "./components/GoogleConversionTracker/GoogleConversionTracker";
 
 export default function Home() {
   const address = encodeURIComponent(
@@ -35,6 +36,11 @@ export default function Home() {
     <>
       <main className="pt-10 text-white flex flex-col items-center justify-center bg-banner">
         <DaysLeft />
+        <GoogleConversionTracker
+          conversionId="AW-16881811266/aY8YCLq1wZ8aEML-7_E-"
+          value={499.99}
+          currency="MXN"
+        />
 
         <div className="text-center">
           <Image
