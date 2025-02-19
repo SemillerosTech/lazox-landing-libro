@@ -87,7 +87,7 @@ export default function Home() {
       </main>
 
       <section
-        id="acerca-del-libro"
+        id="beneficios"
         className="py-20 container mx-auto px-10 md:px-0"
       >
         <h2 className="mx-auto text-center text-main">
