@@ -86,7 +86,10 @@ export default function Home() {
         </div>
       </main>
 
-      <section className="py-20 container mx-auto px-10 md:px-0">
+      <section
+        id="acerca-del-libro"
+        className="py-20 container mx-auto px-10 md:px-0"
+      >
         <h2 className="mx-auto text-center text-main">
           ¿Por qué El Hombre en Busca de Sentido es Imperdible?
         </h2>
@@ -127,7 +130,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto ">
+      <section id="libros-exitosos" className="container mx-auto ">
         <h2 className="mb-4 text-secondary text-3xl pl-10">
           Otros libros exitosos
         </h2>
@@ -135,7 +138,10 @@ export default function Home() {
         <ProductCard />
       </section>
 
-      <section className="container mx-auto py-20 px-10 md:px-0 hidden">
+      <section
+        id="testimonios-logoterapia"
+        className="container mx-auto py-20 px-10 md:px-0 hidden"
+      >
         <h2 className="mb-4 text-secondary text-3xl">
           Profesionales dan testimonio
         </h2>
@@ -172,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" bg-promos">
+      <section id="promociones" className=" bg-promos">
         <div className="container mx-auto">
           <div className="relative flex justify-center">
             <button className="bg-main text-white rounded-full font-cr py-2 px-10 text-xl md:text-3xl  relative -top-5">
@@ -221,7 +227,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container mx-auto flex items-center justify-center py-10 px-10 flex-col">
+      <section
+        id="informacion-logoterapia"
+        className="container mx-auto flex items-center justify-center py-10 px-10 flex-col"
+      >
         <h2 className="text-secondary text-center ">
           Para información especializada sobre logoterapia visita:
         </h2>
