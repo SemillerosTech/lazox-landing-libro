@@ -194,7 +194,7 @@ export default function Home() {
                 className="floating-image w-full ml-10 md:w-9/12 transition-transform duration-300 hover:scale-110"
               />
             </div>
-            <div className="md:w-1/2 flex items-center justify-center">
+            <div className="md:w-8/12 flex items-center justify-center">
               <article className="bg-white rounded-xl p-4 text-lg md:text-2xl">
                 <b className="text-black">
                   Disponible en la Logoteca
@@ -205,10 +205,16 @@ export default function Home() {
                   />
                 </b>
                 <ul>
-                  <li>✅ Hasta 38% de descuento</li>
-                  <li>✅ Módulo GRATIS del curso de logoterapia</li>
+                  <li>
+                    ✅ Hasta <b>38% de descuento</b>{" "}
+                  </li>
+                  <li>
+                    ✅ Módulo <b>GRATIS</b> del curso de logoterapia
+                  </li>
                   <li>✅ Experiencia inmersiva en la Ludoteca Lazos</li>
-                  <li>👉 Stock limitado, no dejes pasar esta oportunidad.</li>
+                  <li>
+                    👉 <b> Stock limitado</b>, no dejes pasar esta oportunidad.
+                  </li>
                 </ul>
               </article>
             </div>

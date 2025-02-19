@@ -1,5 +1,8 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
+import loader from "../../../../public/loader.svg";
+import { div } from "framer-motion/client";
 
 interface FormState {
   nombre: string;
@@ -19,6 +22,7 @@ const NewsLetterForm: React.FC = () => {
   });
 
   const [mensaje, setMensaje] = useState<string>("");
+  const [loading, setLoading] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -33,6 +37,7 @@ const NewsLetterForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setMensaje("");
+    setLoading(true);
 
     try {
       const res = await fetch(
@@ -49,7 +54,7 @@ const NewsLetterForm: React.FC = () => {
       const data = await res.json();
 
       if (res.ok) {
-        setMensaje("Registro exitoso!");
+        setMensaje("¡Registro exitoso!");
         setForm({
           nombre: "",
           correo: "",
@@ -57,8 +62,10 @@ const NewsLetterForm: React.FC = () => {
           mensaje: "",
           origen: "Web Semilleros",
         });
+        setLoading(false);
       } else {
         setMensaje(data.error || "Error en el registro");
+        setLoading(false);
       }
     } catch (error) {
       console.error(error);
@@ -120,11 +127,21 @@ const NewsLetterForm: React.FC = () => {
           type="submit"
           className="text-white rounded-full bg-secondary hover:bg-main transition-colors focus:ring-4 focus:ring-blue-300  text-lg px-5 py-2.5 me-2 mb-2 font-bold"
         >
-          Enviar mensaje
+          {loading === true ? (
+            <Image
+              src={loader}
+              className="animate-spin w-8 mx-auto"
+              alt="Cargando Servicio"
+            />
+          ) : (
+            "Enviar mensaje"
+          )}
         </button>
 
         {mensaje && (
-          <p className="mt-2 text-center text-green-600">{mensaje}</p>
+          <div className="mt-2 rounded bg-secondary py-5 font-bold">
+            <p className="text-center text-white">{mensaje}</p>
+          </div>
         )}
       </form>
     </>
