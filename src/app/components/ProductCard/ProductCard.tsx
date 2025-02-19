@@ -102,7 +102,7 @@ const ProductCard = () => {
               ))}
             </div>
             <b className="text-black text-2xl">${b.offerPrice}</b>
-            <p className="text-sm line-through">Precio normal:${b.price}</p>
+            <p className="text-sm line-through">Precio lista:${b.price}</p>
             <small className="text-secondary text-xs font-bold">
               {b.available ? "Unidades disponibles" : "Agotado"}
             </small>
