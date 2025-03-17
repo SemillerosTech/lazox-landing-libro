@@ -2,7 +2,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import loader from "../../../../public/loader.svg";
-import { div } from "framer-motion/client";
 
 interface FormState {
   nombre: string;
