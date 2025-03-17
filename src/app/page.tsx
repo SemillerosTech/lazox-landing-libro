@@ -1,25 +1,26 @@
 import Image from "next/image";
-import logoWhite from "../../public/logo-white.svg";
+import logoFeria from "../../public/logo-feria-del-libro-lazox.svg";
 import logoMain from "../../public/logo-main.svg";
-import bannerImage from "../../public/banner-image.png";
-import discount from "../../public/Discount.png";
-import price from "../../public/Costo.png";
-import DaysLeft from "./components/DaysLeft";
 import bookYellow from "../../public/libro-yellow.png";
 import footerMono from "../../public/footer-mono.svg";
 import marker from "../../public/marker.png";
 import ProductCard from "./components/ProductCard/ProductCard";
 import Testimonials from "./components/Testimonials/Testimonials";
 import monos from "../../public/monos-offer.svg";
+import cursoLogoterapia from "../../public/diplomado-slide.jpg";
+import maxiConferenciaZoom from "../../public/conferencia-rossy.jpg";
+import conferenciaRosaAdelaida from "../../public/conferencia-rosa-adelaida.jpg";
 import whatsapp from "../../public/whatsapp.svg";
 import logoSemilleros from "../../public/semilleros-logo-apaisado.svg";
+import empresasUV from "../../public/empresas-uv.jpg";
+import formacionContinua from "../../public/formacion-continua.jpg";
 import cursor from "../../public/pointer.svg";
 import mail from "../../public/mail.svg";
 import NewsLetterForm from "./components/NewsLetterForm/NewsLetterForm";
 import PingComponent from "./components/PingComponent/PingComponent";
 import Link from "next/link";
 import FloatingElements from "./components/FloatingElements/FloatingElements";
-import GoogleConversionTracker from "./components/GoogleConversionTracker/GoogleConversionTracker";
+import Slider from "./components/Slider/Slider";
 
 export default function Home() {
   const address = encodeURIComponent(
@@ -34,57 +35,204 @@ export default function Home() {
 
   return (
     <>
-      <main className="pt-10 text-white flex flex-col items-center justify-center bg-banner">
-        <DaysLeft />
-        <GoogleConversionTracker
-          conversionId="AW-16881811266/aY8YCLq1wZ8aEML-7_E-"
-          value={499.99}
-          currency="MXN"
-        />
-
-        <div className="text-center">
+      <main className="pt-10 text-white flex flex-col items-center justify-center bg-banner relative">
+        <div className="text-center z-10">
           <Image
-            src={logoWhite}
+            src={logoFeria}
             alt="Lazox Logo"
-            className="w-[300px] mx-auto mb-4"
+            className="w-[200px] mx-auto mb-4"
           />
 
-          <h1 className="mb-4 font-cr text-4xl leading-none">
-            Feria del libro 22 FEBRERO 2025
+          <h1 className=" font-cr text-4xl leading-none z-10">
+            22 de Marzo 2025
           </h1>
+        </div>
 
-          <h2 className="mb-4 font-cr text-4xl leading-none">
-            Aprovecha tu descuento <br />
-            <span className="text-2xl">
-              y asiste GRATIS a la conferencia principal
-            </span>
+        <section className="container mx-auto">
+          <Slider>
+            {/* SLIDE 1 */}
+            <div className="py-10 flex gap-x-5">
+              <div className="w-6/12">
+                <Image
+                  src={cursoLogoterapia}
+                  alt="Foto de ejemplo del libro"
+                  className="w-3/4 mx-auto rounded-lg"
+                />
+              </div>
+
+              <div className="flex justify-center flex-col items-center w-6/12">
+                <h2 className="text-center ">
+                  <small className="text-amber-300">Diplomado Online</small>{" "}
+                  <br />
+                  SENTIDO DE VIDA: <br />
+                  <span className="text-amber-300">LOGOTERAPIA</span>
+                </h2>
+                <p>🟡 Modalidad: online a través de Zoom.</p>
+                <p>📆 Periodo: 25 de abril al 31 de octubre de 2025.</p>
+                <p>⏰Sesiones: viernes de 17:00 a 21:00 horas.</p>
+
+                <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
+                  Más información
+                </button>
+              </div>
+            </div>
+            {/* SLIDE 2 */}
+            <div className="p-10 flex gap-x-5">
+              <div className="w-full lg:w-6/12 flex-flex-col items-center justify-center">
+                <h2 className="text-center  mb-5">
+                  <small className="text-amber-300">
+                    Grán conferencía LAZOX
+                  </small>
+                  <br />
+                  LOGOTERAPIA EN EL AULA <br />
+                </h2>
+
+                <h2 className="text-center  mb-5">
+                  <small className="text-amber-300">Invitado</small>
+                  <br />
+                  Miguel Mayorga González
+                </h2>
+
+                <h2 className="text-center ">
+                  <small className="text-amber-300">
+                    Con la participación especial de:
+                  </small>
+                  <br />
+                  Rosa Adelaida del Valle
+                </h2>
+              </div>
+
+              <div className="w-full lg:w-6/12">
+                <Image
+                  src={conferenciaRosaAdelaida}
+                  alt="Foto de ejemplo del libro"
+                  className="w-3/4 mx-auto rounded-lg"
+                />
+              </div>
+            </div>
+            {/* SLIDE 3 */}
+
+            <div className="bg-green-500 p-10">Slide 3</div>
+          </Slider>
+        </section>
+
+        {/* <div className="flex justify-center relative">
+          <Link href={"#contacto"}>
+            <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
+              Quiero Inscribirme al diplomado de logoterapia
+            </button>
+          </Link>
+        </div> */}
+      </main>
+
+      {/* DIPLOMADO LA VERACRUZANA */}
+
+      <section className="h-fit flex py-20">
+        <div className="w-full lg:w-6/12 relative -z-10 flex flex-col justify-center items-center">
+          <h2 className="text-center  leading-none">
+            Únete a una gran comunidad <br />
+            que ha encontrado el sentido
+          </h2>
+
+          <Image
+            src={maxiConferenciaZoom}
+            alt="Conferencia Zoom Rosa Adelaida"
+            className=" w-3/4 my-10"
+          />
+
+          <h2 className="text-center mb-10 leading-none">
+            Con los mejores expertos en logoterapia
           </h2>
         </div>
 
-        <div className="flex">
-          <div className="h-full flex  items-start">
-            <Image
-              src={discount}
-              alt="Libro banner"
-              className="floating-image "
-            />
-          </div>
-          <article className="text-center md:max-w-lg mx-auto">
-            <Image src={bannerImage} alt="Libro banner" />
-          </article>
+        <div className="w-full lg:w-6/12 p-5">
+          <small className="font-semibold text-[#3499D0]">
+            Diplomado Online
+          </small>
 
-          <div className="h-full flex items-end">
-            <Image src={price} alt="Libro banner" className="floating-image" />
+          <h2 className="leading-none mb-5 text-[#C2258E]">
+            SENTIDO DE VIDA: <br />
+            <span>LOGOTERAPIA</span>
+          </h2>
+
+          <p>🟡 Modalidad: online a través de Zoom.</p>
+          <p>📆 Periodo: 25 de abril al 31 de octubre de 2025.</p>
+          <p>⏰ Sesiones: viernes de 17:00 a 21:00 horas.</p>
+
+          <h3 className="mt-5 mb-3 text-2xl text-[#C2258E]">📚 Módulos:</h3>
+
+          <p className="mb-3">
+            Conferencia introductoria Vida y obra de Viktor Frankl.
+          </p>
+
+          <ul className="pl-5 mb-3">
+            <li>
+              I. El corazón de la logoterapia: el sentido de vida como guía.
+            </li>
+            <li>II. Espiritualidad y recursos noéticos.</li>
+            <li>III. Tríada de valores logoterapéuticos.</li>
+            <li>IV. Tríadas en la logoterapia.</li>
+            <li>V. La logoterapia y sus aplicaciones en el siglo XXI.</li>
+          </ul>
+
+          <h3 className="mt-5 mb-3 text-2xl text-[#C2258E]">💰 Inversión:</h3>
+
+          <p className="font-bold">Público en general:</p>
+          <p className="mb-4">
+            Pago inicial de $1,800.00 + 6 mensualidades de $1,400.00 c/u +
+            $600.00 diploma (el diploma se paga al final).
+          </p>
+
+          <p className="font-bold">Comunidad FEUV y UV:</p>
+
+          <p className="mb-4">
+            Pago inicial de $1,650.00 + 6 mensualidades de $1,250.00 c/u +
+            $600.00 diploma (el diploma se paga al final).
+          </p>
+
+          <p className="mb-10">
+            Al finalizar se entregará un diploma digital emitido por Formación
+            Continua del Fondo de Empresas de la Universidad Veracruzana y
+            avalada por la Asociación Semilleros de sentido.
+          </p>
+
+          <div className="flex justify-center gap-x-5 mb-5 ">
+            <div className="w-3/12">
+              <Image
+                src={empresasUV}
+                alt="Foto de ejemplo del libro"
+                className="w-full"
+              />
+            </div>
+
+            <div className="w-3/12">
+              <Image
+                src={formacionContinua}
+                alt="Foto de ejemplo del libro"
+                className="w-full"
+              />
+            </div>
+
+            <div className="w-3/12 flex items-center">
+              <Image
+                src={logoSemilleros}
+                alt="Foto de ejemplo del libro"
+                className="w-full"
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-center w-full">
+            <a
+              href="https://forms.gle/gqMeythCy8DYK84X"
+              target="_blank"
+              className="mx-auto bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative"
+            >
+              📝 Ficha de inscripción:
+            </a>
           </div>
         </div>
-        <div className="flex justify-center relative">
-          <Link href={"#contacto"}>
-            <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
-              Quiero mi libro con descuento
-            </button>
-          </Link>
-        </div>
-      </main>
+      </section>
 
       <section
         id="beneficios"

@@ -65,7 +65,8 @@ b {
 }
 
 .bg-banner {
-  background: transparent url("/banner-bg.jpg") fixed no-repeat center / cover;
+  background: transparent url("/back-transparent.png") fixed no-repeat center /
+    cover;
 }
 
 .bg-promos {

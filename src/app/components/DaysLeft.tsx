@@ -5,7 +5,7 @@ const DaysLeft = () => {
   const [daysLeft, setDaysLeft] = useState(0);
 
   useEffect(() => {
-    const targetDate = new Date("2025-02-22");
+    const targetDate = new Date("2025-03-22");
     const today = new Date();
     const difference = Math.ceil(
       (targetDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
