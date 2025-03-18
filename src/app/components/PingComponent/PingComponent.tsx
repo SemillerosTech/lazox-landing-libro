@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 
 const PingComponent = () => {
-  const serviceURL = "https://semilleros-lazox-newsletter.onrender.com/ping";
+  const serviceURL = "https://semilleros-lazox-newsletter.vercel.app/ping";
   const [mensaje, setMensaje] = useState("⌛");
 
   const fetchData = async () => {
