@@ -40,7 +40,7 @@ const NewsLetterForm: React.FC = () => {
 
     try {
       const res = await fetch(
-        "https://semilleros-lazox-newsletter.onrender.com/register",
+        "https://semilleros-lazox-newsletter.vercel.app/register",
         {
           method: "POST",
           headers: {
