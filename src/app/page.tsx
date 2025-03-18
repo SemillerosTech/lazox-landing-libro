@@ -266,7 +266,7 @@ export default function Home() {
         />
 
         <div className="container mx-auto flex flex-col items-center justify-center px-5 lg:px-0 text-center">
-          <h2 className="font-bold ">"El hombre en busca de sentido"</h2>
+          <h2 className="font-bold ">El hombre en busca de sentido</h2>
 
           <h2>Aprovecha tu descuento</h2>
           <p>Disponible solo en la feria del libro LAZOX</p>

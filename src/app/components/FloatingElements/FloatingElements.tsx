@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 import { ArrowUp, MapPin } from "lucide-react";
 import whatsapp from "../../../../public/whatsapp.svg";
 
-import Link from "next/link";
-
 const FloatingElements = () => {
   const [isVisible, setIsVisible] = useState(false);
 
