@@ -69,6 +69,11 @@ b {
     cover;
 }
 
+.bg-bibliografia {
+  background: transparent url("/bg-bibliografia.jpg") fixed no-repeat center /
+    cover;
+}
+
 .bg-promos {
   background: transparent url("/bg-offer.jpg") fixed no-repeat center / cover;
 }

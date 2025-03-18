@@ -7,6 +7,9 @@ import marker from "../../public/marker.png";
 import ProductCard from "./components/ProductCard/ProductCard";
 import Testimonials from "./components/Testimonials/Testimonials";
 import monos from "../../public/monos-offer.svg";
+import elhombreenbuscadesentido from "../../public/libro-transparent.png";
+import descuento from "../../public/Discount.png";
+import precio from "../../public/Costo.png";
 import cursoLogoterapia from "../../public/diplomado-slide.jpg";
 import maxiConferenciaZoom from "../../public/conferencia-rossy.jpg";
 import conferenciaRosaAdelaida from "../../public/conferencia-rosa-adelaida.jpg";
@@ -21,6 +24,7 @@ import PingComponent from "./components/PingComponent/PingComponent";
 import Link from "next/link";
 import FloatingElements from "./components/FloatingElements/FloatingElements";
 import Slider from "./components/Slider/Slider";
+import bibliografia from "../../public/bibliografia-descuento.svg";
 
 export default function Home() {
   const address = encodeURIComponent(
@@ -35,12 +39,20 @@ export default function Home() {
 
   return (
     <>
-      <main className="pt-10 text-white flex flex-col items-center justify-center bg-banner relative">
+      <main className="py-10 text-white flex flex-col items-center justify-center bg-banner relative">
+        <Link href={"#bibliografia"}>
+          <Image
+            src={bibliografia}
+            alt="Bibliografía con descuento"
+            className="!absolute top-6 left-3 w-[13rem] floating-image "
+          />
+        </Link>
+
         <div className="text-center z-10">
           <Image
             src={logoFeria}
             alt="Lazox Logo"
-            className="w-[200px] mx-auto mb-4"
+            className="w-[150px] mx-auto mb-4"
           />
 
           <h1 className=" font-cr text-4xl leading-none z-10">
@@ -71,9 +83,11 @@ export default function Home() {
                 <p>📆 Periodo: 25 de abril al 31 de octubre de 2025.</p>
                 <p>⏰Sesiones: viernes de 17:00 a 21:00 horas.</p>
 
-                <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
-                  Más información
-                </button>
+                <Link href={"#diplomado"}>
+                  <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
+                    Más información
+                  </button>
+                </Link>
               </div>
             </div>
             {/* SLIDE 2 */}
@@ -100,6 +114,17 @@ export default function Home() {
                   <br />
                   Rosa Adelaida del Valle
                 </h2>
+
+                <Link
+                  href={
+                    "https://wa.me/525520802821?text=Estoy%20interesad@%20en%20más%20información%20respecto%20a%20la%20conferencia%20de%20logoterapia"
+                  }
+                  target="_blank"
+                >
+                  <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
+                    Inscribeme
+                  </button>
+                </Link>
               </div>
 
               <div className="w-full lg:w-6/12">
@@ -110,24 +135,13 @@ export default function Home() {
                 />
               </div>
             </div>
-            {/* SLIDE 3 */}
-
-            <div className="bg-green-500 p-10">Slide 3</div>
           </Slider>
         </section>
-
-        {/* <div className="flex justify-center relative">
-          <Link href={"#contacto"}>
-            <button className="bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative -bottom-5">
-              Quiero Inscribirme al diplomado de logoterapia
-            </button>
-          </Link>
-        </div> */}
       </main>
 
       {/* DIPLOMADO LA VERACRUZANA */}
 
-      <section className="h-fit flex py-20">
+      <section id="diplomado" className="h-fit flex py-20">
         <div className="w-full lg:w-6/12 relative -z-10 flex flex-col justify-center items-center">
           <h2 className="text-center  leading-none">
             Únete a una gran comunidad <br />
@@ -231,6 +245,39 @@ export default function Home() {
               📝 Ficha de inscripción:
             </a>
           </div>
+        </div>
+      </section>
+
+      <section
+        id="bibliografia"
+        className="bg-bibliografia  text-white py-10 relative"
+      >
+        <Image
+          src={descuento}
+          alt="Foto de ejemplo del libro"
+          className="w-[300px] absolute top-3 left-3"
+        />
+
+        <Image
+          src={precio}
+          alt="Foto de ejemplo del libro"
+          className="w-[300px] absolute top-3 right-3"
+        />
+
+        <div className="container mx-auto flex flex-col items-center justify-center">
+          <h2 className="font-bold ">"El hombre en busca de sentido"</h2>
+
+          <h2>Aprovecha tu descuento</h2>
+          <p>Disponible solo en la feria del libro LAZOX</p>
+
+          <Image
+            src={elhombreenbuscadesentido}
+            alt="Foto de ejemplo del libro"
+            className="w-[300px]"
+          />
+
+          <h2>Este y otros libros de Viktor Frankl</h2>
+          <p>A precio especial</p>
         </div>
       </section>
 
