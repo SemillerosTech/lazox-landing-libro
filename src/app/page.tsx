@@ -61,8 +61,8 @@ export default function Home() {
         <section className="container mx-auto">
           <Slider>
             {/* SLIDE 1 */}
-            <div className="py-10 flex gap-x-5">
-              <div className="w-6/12">
+            <div className="py-10 flex flex-col lg:flex-row gap-x-5">
+              <div className="w-full lg:w-6/12">
                 <Image
                   src={cursoLogoterapia}
                   alt="Foto de ejemplo del libro"
@@ -70,9 +70,9 @@ export default function Home() {
                 />
               </div>
 
-              <div className="flex justify-center flex-col items-center w-6/12">
+              <div className="flex justify-center flex-col items-center w-full lg:w-6/12">
                 <h2 className="text-center ">
-                  <small className="text-amber-300">Diplomado Online</small>{" "}
+                  <small className="text-amber-300">Diplomado Online</small>
                   <br />
                   SENTIDO DE VIDA: <br />
                   <span className="text-amber-300">LOGOTERAPIA</span>
@@ -89,8 +89,8 @@ export default function Home() {
               </div>
             </div>
             {/* SLIDE 2 */}
-            <div className="p-10 flex gap-x-5">
-              <div className="w-full lg:w-6/12 flex-flex-col items-center justify-center">
+            <div className="p-10 flex flex-col lg:flex-row gap-x-5">
+              <div className="w-full lg:w-6/12 flex-flex-col items-center justify-center order-2 lg:order-1">
                 <h2 className="text-center  mb-5">
                   <small className="text-amber-300">
                     Grán conferencía LAZOX
@@ -125,7 +125,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="w-full lg:w-6/12">
+              <div className="w-full lg:w-6/12 order-1 lg:order-2">
                 <Image
                   src={conferenciaRosaAdelaida}
                   alt="Foto de ejemplo del libro"
@@ -251,21 +251,21 @@ export default function Home() {
 
       <section
         id="bibliografia"
-        className="bg-bibliografia  text-white py-10 relative"
+        className="bg-bibliografia  text-white pt-44 pb-10  lg:py-10 relative"
       >
         <Image
           src={descuento}
           alt="Foto de ejemplo del libro"
-          className="w-[300px] absolute top-3 left-3"
+          className="w-[150px] lg:w-[300px] absolute top-3 left-3"
         />
 
         <Image
           src={precio}
           alt="Foto de ejemplo del libro"
-          className="w-[300px] absolute top-3 right-3"
+          className="w-[150px] lg:w-[300px] absolute top-3 right-3"
         />
 
-        <div className="container mx-auto flex flex-col items-center justify-center">
+        <div className="container mx-auto flex flex-col items-center justify-center px-5 lg:px-0 text-center">
           <h2 className="font-bold ">"El hombre en busca de sentido"</h2>
 
           <h2>Aprovecha tu descuento</h2>
