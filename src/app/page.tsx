@@ -24,7 +24,6 @@ import PingComponent from "./components/PingComponent/PingComponent";
 import Link from "next/link";
 import FloatingElements from "./components/FloatingElements/FloatingElements";
 import Slider from "./components/Slider/Slider";
-import bibliografia from "../../public/bibliografia-descuento.svg";
 
 export default function Home() {
   const address = encodeURIComponent(
@@ -39,13 +38,12 @@ export default function Home() {
 
   return (
     <>
-      <main className="py-10 text-white flex flex-col items-center justify-center bg-banner relative">
-        <Link href={"#bibliografia"}>
-          <Image
-            src={bibliografia}
-            alt="Bibliografía con descuento"
-            className="!absolute top-6 left-3 w-[13rem] floating-image "
-          />
+      <main className="pb-10 text-white flex flex-col items-center justify-center bg-banner relative">
+        <Link href={"#bibliografia"} className="w-full">
+          <div className="bg-white w-full text-black top-0 left-0 p-2 text-center mb-10 font-bold">
+            Toda la bibliografía de VIKTOR FRANKL al{" "}
+            <b className="text-red-600"> 38% de descuento</b>
+          </div>
         </Link>
 
         <div className="text-center z-10">
@@ -141,7 +139,10 @@ export default function Home() {
 
       {/* DIPLOMADO LA VERACRUZANA */}
 
-      <section id="diplomado" className="h-fit flex py-20">
+      <section
+        id="diplomado"
+        className="h-fit flex flex-col lg:flex-row  py-20"
+      >
         <div className="w-full lg:w-6/12 relative -z-10 flex flex-col justify-center items-center">
           <h2 className="text-center  leading-none">
             Únete a una gran comunidad <br />
@@ -242,7 +243,7 @@ export default function Home() {
               target="_blank"
               className="mx-auto bg-complement text-black rounded-full font-cr py-2 px-10 text-lg md:text-3xl  relative"
             >
-              📝 Ficha de inscripción:
+              📝 Ficha de inscripción
             </a>
           </div>
         </div>
@@ -373,7 +374,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="promociones" className=" bg-promos">
+      <section id="promociones" className=" bg-banner">
         <div className="container mx-auto">
           <div className="relative flex justify-center">
             <button className="bg-main text-white rounded-full font-cr py-2 px-10 text-xl md:text-3xl  relative -top-5">
