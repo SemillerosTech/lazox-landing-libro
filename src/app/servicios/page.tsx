@@ -238,13 +238,13 @@ const page = () => {
       </footer>
 
       <article className="fixed bottom-0 left-0 w-full flex flex-col">
-        <div className="bg-amber-400 p-1 text-center font-bold">
+        <div className="bg-amber-400 p-2 text-center font-bold">
           Para máyor información
         </div>
         <div className="flex w-full">
           <Link
             href="tel:+5215530179924"
-            className="w-1/2 bg-[var(--main)] text-white p-1 text-center flex items-center justify-center"
+            className="w-1/2 bg-[var(--main)] text-white p-2 text-center flex items-center justify-center"
           >
             <Image
               src={whitePhone}
@@ -258,7 +258,7 @@ const page = () => {
             href={
               "https://wa.me/525520802821?text=Hola%20me%20gustaria%20información%20de%20sus%20servicios"
             }
-            className="w-1/2 bg-[var(--secondary)] text-white p-1 text-center flex items-center justify-center"
+            className="w-1/2 bg-[var(--secondary)] text-white p-2 text-center flex items-center justify-center"
           >
             <Image
               src={whiteWhats}
