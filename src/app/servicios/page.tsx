@@ -84,8 +84,8 @@ const page = () => {
               oportunidades.
             </li>
             <li>
-              Fortalecimiento del "músculo espiritual" para afrontar la
-              incertidumbre.
+              Fortalecimiento del &#8220;músculo espiritual&#8220; para afrontar
+              la incertidumbre.
             </li>
           </ul>
         </section>
@@ -152,7 +152,9 @@ const page = () => {
           </a>
         </p>
         <p>© 2025 Semilleros de Sentido A.C. Todos los derechos reservados.</p>
-        <blockquote>"Donde cada semilla encuentra su propósito..."</blockquote>
+        <blockquote>
+          &#8220;Donde cada semilla encuentra su propósito...&#8220;
+        </blockquote>
       </footer>
     </>
   );
