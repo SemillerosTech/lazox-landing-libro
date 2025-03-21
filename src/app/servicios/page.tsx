@@ -7,12 +7,16 @@ import spaces from "../../../public/servicios/spaces.jpg";
 import actividades from "../../../public/servicios/activities.jpg";
 import talleres from "../../../public/servicios/talleres.jpg";
 import acompanamiento from "../../../public/servicios/acompanamiento.jpg";
-import OnlyOnMobile from "../components/OnlyOnMobile/OnlyOnMobile";
+import whitePhone from "../../../public/white-phone.svg";
+import whiteWhats from "../../../public/white-whatsapp.svg";
+
+import Link from "next/link";
+// import OnlyOnMobile from "../components/OnlyOnMobile/OnlyOnMobile";
 
 const page = () => {
   return (
     <>
-      <OnlyOnMobile />
+      {/* <OnlyOnMobile /> */}
       <header className="p-2 shadow-lg sticky top-0 bg-white">
         <Image
           src={logoMain}
@@ -199,7 +203,7 @@ const page = () => {
         </section>
       </main>
 
-      <footer className="bg-[var(--semilleros)] py-10 container mx-auto px-4 lg:px-10 text-white ">
+      <footer className="bg-[var(--semilleros)] py-10 container mx-auto px-4 lg:px-10 text-white">
         <h2>Información de Contacto</h2>
         <p className="mb-3">
           <strong>Directora: </strong> Dra. Rosa Adelaida Del Valle Puente
@@ -232,6 +236,39 @@ const page = () => {
           &#8220;Donde cada semilla encuentra su propósito...&#8220;
         </blockquote>
       </footer>
+
+      <article className="fixed bottom-0 left-0 w-full flex flex-col">
+        <div className="bg-amber-400 p-1 text-center font-bold">
+          Para máyor información
+        </div>
+        <div className="flex w-full">
+          <Link
+            href="tel:+5215530179924"
+            className="w-1/2 bg-[var(--main)] text-white p-1 text-center flex items-center justify-center"
+          >
+            <Image
+              src={whitePhone}
+              alt="Lazox Logo"
+              className="w-[20px] mr-2"
+            />
+            Llámanos
+          </Link>
+
+          <Link
+            href={
+              "https://wa.me/525520802821?text=Hola%20me%20gustaria%20información%20de%20sus%20servicios"
+            }
+            className="w-1/2 bg-[var(--secondary)] text-white p-1 text-center flex items-center justify-center"
+          >
+            <Image
+              src={whiteWhats}
+              alt="Lazox Logo"
+              className="w-[20px] mr-2"
+            />
+            Whatsapp
+          </Link>
+        </div>
+      </article>
     </>
   );
 };
