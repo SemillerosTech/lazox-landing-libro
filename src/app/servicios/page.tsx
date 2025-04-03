@@ -11,6 +11,8 @@ import whitePhone from "../../../public/white-phone.svg";
 import whiteWhats from "../../../public/white-whatsapp.svg";
 
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 // import OnlyOnMobile from "../components/OnlyOnMobile/OnlyOnMobile";
 
 const page = () => {
@@ -266,6 +268,21 @@ const page = () => {
               className="w-[20px] mr-2"
             />
             Whatsapp
+          </Link>
+
+          <Link
+            href={
+              "https://www.google.com/maps/search/?api=1&query=Calz.+de+Tlalpan+1552,+sineo,+Miravalle,+Benito+Juárez,+03580+Ciudad+de+México,+CDMX"
+            }
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-1/2 bg-[var(--complement)] text-black p-2 text-center flex items-center justify-center"
+          >
+            <FontAwesomeIcon
+              icon={faLocationDot}
+              className="text-black mr-2 text-xl max-w-4"
+            />
+            Ubicación
           </Link>
         </div>
       </article>
